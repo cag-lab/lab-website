@@ -1,13 +1,34 @@
 import { useEffect, useState } from 'react'
-import { lab, about, research, journey, links } from './content.js'
+import { lab, about, team, onwards, scholar, recentPapers, research, links } from './content.js'
 import NeuralPulse from './NeuralPulse.jsx'
 
 const NAV = [
   ['about', 'About'],
   ['research', 'Research'],
-  ['journey', 'Path'],
   ['community', 'Community'],
+  ['papers', 'Papers'],
 ]
+
+function renderTextWithLinks(text) {
+  const urlRegex = /(https?:\/\/[^\s)]+)/g
+  const parts = text.split(urlRegex)
+
+  return parts.map((part, index) => {
+    if (part.startsWith('http://') || part.startsWith('https://')) {
+      return (
+        <a key={`${part}-${index}`} href={part} target="_blank" rel="noreferrer">
+          {part}
+        </a>
+      )
+    }
+    return <span key={`${part}-${index}`}>{part}</span>
+  })
+}
+
+function formatYearRange(value) {
+  if (!value) return value
+  return value.endsWith('-') ? `${value}present` : value
+}
 
 function useReveal() {
   useEffect(() => {
@@ -78,8 +99,8 @@ function Hero() {
         </h1>
         <p className="hero__lede">{lab.summary}</p>
         <div className="hero__actions">
+          <a className="btn btn--ghost" href="#about">About the Lab</a>
           <a className="btn btn--primary" href="#research">Explore our research</a>
-          <a className="btn btn--ghost" href="#about">Meet Cathy</a>
         </div>
       </div>
       <a href="#about" className="hero__scroll" aria-label="Scroll to About">
@@ -93,28 +114,68 @@ function About() {
   return (
     <section className="section" id="about">
       <div className="about">
-        <div className="about__card reveal">
-          <div className="avatar" aria-hidden="true">
-            <span>CGH</span>
-            <svg className="avatar__ring" viewBox="0 0 200 200">
-              <circle cx="100" cy="100" r="92" />
-            </svg>
-          </div>
-          <h3>{lab.pi}</h3>
-          <p className="muted">{lab.role}</p>
-          <p className="muted">{lab.institution}</p>
-          <div className="chips">
-            <span className="chip">PCCM</span>
-            <span className="chip">ICU EHR</span>
-            <span className="chip">Machine Learning</span>
-          </div>
-        </div>
         <div className="about__text reveal">
           <p className="eyebrow">About</p>
-          <h2>Meet Cathy</h2>
+          <h2>Meet the Lab</h2>
           {about.map((p, i) => (
-            <p key={i} className={i === 0 ? 'lead' : ''}>{p}</p>
+            <p key={i} className={i === 0 ? 'lead' : ''}>{renderTextWithLinks(p)}</p>
           ))}
+          <div className="about__team">
+            <h3>Team</h3>
+            {team.map((member) => (
+              <article key={member.name} className="team-member">
+                {member.photoSrc && (
+                  <img
+                    src={member.photoSrc}
+                    alt={member.photoAlt}
+                    loading="lazy"
+                    className={`team-member__photo ${member.photoClass || ''}`.trim()}
+                  />
+                )}
+                <p className="team-member__name">{member.name}</p>
+                {member.role && <p className="team-member__meta">{renderTextWithLinks(member.role)}</p>}
+                {member.mentorLine && <p className="team-member__meta">{renderTextWithLinks(member.mentorLine)}</p>}
+                {member.years && <p className="team-member__meta">{renderTextWithLinks(formatYearRange(member.years))}</p>}
+                {member.blurb && <p>{renderTextWithLinks(member.blurb)}</p>}
+                {member.secondaryPhotoSrc && (
+                  <img
+                    src={member.secondaryPhotoSrc}
+                    alt={member.secondaryPhotoAlt}
+                    loading="lazy"
+                    className={`team-member__photo ${member.secondaryPhotoClass || ''}`.trim()}
+                  />
+                )}
+              </article>
+            ))}
+          </div>
+          <div className="about__team">
+            <h3>Onwards</h3>
+            {onwards.map((member) => (
+              <article key={member.name} className="team-member">
+                {member.photoSrc && (
+                  <img
+                    src={member.photoSrc}
+                    alt={member.photoAlt}
+                    loading="lazy"
+                    className={`team-member__photo ${member.photoClass || ''}`.trim()}
+                  />
+                )}
+                <p className="team-member__name">{member.name}</p>
+                {member.role && <p className="team-member__meta">{renderTextWithLinks(member.role)}</p>}
+                {member.mentorLine && <p className="team-member__meta">{renderTextWithLinks(member.mentorLine)}</p>}
+                {member.years && <p className="team-member__meta">{renderTextWithLinks(formatYearRange(member.years))}</p>}
+                {member.blurb && <p>{renderTextWithLinks(member.blurb)}</p>}
+                {member.secondaryPhotoSrc && (
+                  <img
+                    src={member.secondaryPhotoSrc}
+                    alt={member.secondaryPhotoAlt}
+                    loading="lazy"
+                    className={`team-member__photo ${member.secondaryPhotoClass || ''}`.trim()}
+                  />
+                )}
+              </article>
+            ))}
+          </div>
           <blockquote>{lab.tagline}</blockquote>
         </div>
       </div>
@@ -165,31 +226,6 @@ function Research() {
   )
 }
 
-function Journey() {
-  return (
-    <section className="section" id="journey">
-      <div className="section__head reveal">
-        <p className="eyebrow">Path</p>
-        <h2>Training & trajectory</h2>
-      </div>
-      <ol className="timeline">
-        {journey.map((j, i) => (
-          <li
-            key={j.label}
-            className={`timeline__item reveal ${j.current ? 'is-current' : ''}`}
-            style={{ '--delay': `${i * 150}ms` }}
-          >
-            <span className="timeline__dot" />
-            <p className="timeline__place">{j.place}</p>
-            <h3>{j.label}</h3>
-            {j.note && <p className="muted">{j.note}</p>}
-          </li>
-        ))}
-      </ol>
-    </section>
-  )
-}
-
 function Community() {
   return (
     <section className="section section--tint" id="community">
@@ -211,6 +247,9 @@ function Community() {
             className="link-card reveal"
             style={{ '--delay': `${i * 120}ms` }}
           >
+            {l.imageSrc && (
+              <img src={l.imageSrc} alt={l.imageAlt} loading="lazy" className="link-card__image" />
+            )}
             <p className="link-card__sub">{l.subtitle}</p>
             <h3>{l.title}</h3>
             <p>{l.body}</p>
@@ -237,6 +276,28 @@ function Community() {
   )
 }
 
+function RecentPapers() {
+  return (
+    <section className="section" id="papers">
+      <div className="section__head reveal">
+        <p className="eyebrow">Recent Papers</p>
+        <h2>Latest publications</h2>
+        <p className="muted">
+          See full profile on{' '}
+          <a href={scholar.profileUrl} target="_blank" rel="noreferrer">Google Scholar</a>.
+        </p>
+      </div>
+      <div className="papers-list reveal">
+        {recentPapers.map((paper) => (
+          <a key={paper.href} href={paper.href} target="_blank" rel="noreferrer" className="paper-link">
+            {paper.title}
+          </a>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function Footer() {
   return (
     <footer className="footer">
@@ -258,8 +319,8 @@ export default function App() {
         <Hero />
         <About />
         <Research />
-        <Journey />
         <Community />
+        <RecentPapers />
       </main>
       <Footer />
     </>

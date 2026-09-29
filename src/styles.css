@@ -112,24 +112,47 @@ a { color: inherit; }
 .section__head { text-align: center; max-width: 680px; margin-bottom: 3.5rem; }
 
 /* About */
-.about { display: grid; grid-template-columns: 340px 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
-.about__card {
-  text-align: center; padding: 40px 28px; border-radius: var(--radius);
-  background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow);
-}
-.about__card p { margin: 0; }
-.avatar { position: relative; width: 150px; height: 150px; margin: 0 auto 22px; display: grid; place-items: center; }
-.avatar span {
-  width: 124px; height: 124px; border-radius: 50%; display: grid; place-items: center;
-  font-family: var(--serif); font-size: 2.2rem; color: #fff;
-  background: linear-gradient(140deg, var(--lav-400), var(--lav-700));
-}
-.avatar__ring { position: absolute; inset: 0; animation: spin 18s linear infinite; }
-.avatar__ring circle { fill: none; stroke: var(--lav-400); stroke-width: 2; stroke-dasharray: 6 12; stroke-linecap: round; }
-.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
-.chip { font-size: 0.8rem; font-weight: 500; padding: 5px 12px; border-radius: 999px; background: var(--lav-100); color: var(--lav-700); }
+.about { max-width: 860px; margin: 0 auto; }
 .lead { font-size: 1.2rem; color: var(--ink); }
 .about__text p:not(.eyebrow):not(.lead) { color: var(--ink-soft); }
+.about__team {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 0.9rem;
+  justify-items: center;
+}
+.about__team h3 {
+  margin-bottom: 0.2rem;
+  justify-self: start;
+  width: min(100%, 460px);
+}
+.team-member {
+  width: min(100%, 460px);
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.team-member__photo {
+  width: min(100%, 260px);
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+}
+.team-member__photo--small { width: min(100%, 170px); }
+.team-member__photo--group { width: min(100%, 380px); }
+.team-member__name {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+.team-member__meta {
+  margin: 0.15rem 0;
+  color: var(--lav-700) !important;
+  font-weight: 500;
+}
 blockquote {
   margin: 1.8em 0 0; padding: 4px 0 4px 22px; border-left: 3px solid var(--lav-400);
   font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--lav-700);
@@ -174,6 +197,13 @@ blockquote {
 }
 .link-card:hover { transform: translateY(-6px); border-color: var(--lav-400); background: #fff; }
 .link-card p { color: var(--ink-soft); }
+.link-card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 0.9rem;
+  border: 1px solid var(--border);
+}
 .link-card__sub { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lav-500) !important; margin-bottom: 0.5rem; }
 .link-card__host { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 0.88rem; font-weight: 600; color: var(--lav-700); }
 .link-card__host svg { width: 16px; fill: none; stroke: currentColor; stroke-width: 2; transition: transform 0.3s; }
@@ -188,6 +218,31 @@ blockquote {
 .join h3 { color: #fff; }
 .join p { margin: 0; opacity: 0.88; max-width: 620px; }
 .join .btn--primary { background: #fff; color: var(--lav-700); flex-shrink: 0; }
+
+/* Recent papers */
+.papers-list {
+  display: grid;
+  gap: 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+.paper-link {
+  display: block;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--lav-700);
+  background: var(--lav-50);
+  font-size: 0.94rem;
+}
+.paper-link:hover {
+  border-color: var(--lav-400);
+  background: #fff;
+}
 
 /* Footer */
 .footer { padding: 40px clamp(16px, 6vw, 80px); text-align: center; font-size: 0.9rem; border-top: 1px solid var(--border); }
@@ -211,8 +266,7 @@ blockquote {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .about { grid-template-columns: 1fr; }
-  .about__card { max-width: 400px; width: 100%; margin: 0 auto; }
+  .about { max-width: 100%; }
   .cards, .links { grid-template-columns: 1fr; max-width: 560px; }
   .timeline { grid-template-columns: 1fr; gap: 32px; padding-left: 36px; }
   .timeline::before { top: 10px; bottom: 10px; left: 9px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, var(--lav-200), var(--lav-500)); }
