@@ -27,7 +27,7 @@ export const team = [
     mentorLine: 'Co-mentored with Yuan Luo',
     blurb:
       'Saki Amagai was awarded an American Heart Association (AHA) Predoctoral Fellowship. Her recent papers include The Epidemiology of ICU Readmissions Across Ten Health Systems (Critical Care Explorations, 2025), and PAUSE-Agents: A Clinician-in-the-Loop Multi-Agent AI Pipeline for ICU-to-Ward Handoff Briefs (medRxiv, 2026).',
-    photoSrc: '/cathy-saki-poster.png',
+    photoSrc: './cathy-saki-poster.png',
     photoAlt: 'Cathy Gao-Howard and Saki Amagai standing beside Saki\'s ICU research poster.',
   },
   {
@@ -36,10 +36,10 @@ export const team = [
     years: '2024–present',
     blurb:
       'Wan-Ting helps manage the NU-CLIF database and supports ongoing CLIF Consortium collaborations across institutions.',
-    photoSrc: '/wan-ting-liao.png',
+    photoSrc: './wan-ting-liao.png',
     photoAlt: 'Portrait of Wan-Ting Liao.',
     photoClass: 'team-member__photo--small',
-    secondaryPhotoSrc: '/wan-ting-group.png',
+    secondaryPhotoSrc: './wan-ting-group.png',
     secondaryPhotoAlt: 'Wan-Ting Liao with lab members at a group dinner.',
     secondaryPhotoClass: 'team-member__photo--group',
   },
@@ -48,7 +48,7 @@ export const team = [
     role: 'Medicine residents',
     years: '2025-present',
     blurb: 'Extubation to HFNC/NIV, proning documentation',
-    photoSrc: '/claudia-bhavana-team.png',
+    photoSrc: './claudia-bhavana-team.png',
     photoAlt: 'Claudia Bennett-Caso and Bhavana Ambil with collaborators at a poster session.',
     photoClass: 'team-member__photo--group',
   },
@@ -62,7 +62,7 @@ export const onwards = [
       'Co-mentored with Ankit Agrawal, PhD, in labs of Sasha Misharin, MD PhD, and Alok Choudhary, PhD',
     years: '2023-2026',
     blurb: '',
-    photoSrc: '/alec-peltekian.png',
+    photoSrc: './alec-peltekian.png',
     photoAlt: 'Alec Peltekian and collaborators standing in front of a research poster.',
     photoClass: 'team-member__photo--group',
   },
@@ -99,7 +99,7 @@ export const links = [
     body: 'Collaborative ICU data resource for research and innovation in critical care medicine.',
     href: 'https://clif-icu.com',
     host: 'clif-icu.com',
-    imageSrc: '/clif-consortium-group.png',
+    imageSrc: './clif-consortium-group.png',
     imageAlt: 'CLIF Consortium collaborators presenting at a conference poster.',
   },
   {
@@ -115,7 +115,7 @@ export const links = [
     body: 'Lung biology, aging, and immunology at Northwestern.',
     href: 'https://labs.feinberg.northwestern.edu/budinger/index.html',
     host: 'labs.feinberg.northwestern.edu',
-    imageSrc: '/budinger-misharin-group.png',
+    imageSrc: './budinger-misharin-group.png',
     imageAlt: 'Group photo associated with the Budinger and Misharin labs.',
   },
 
