@@ -16,7 +16,7 @@ export const about = [
   'The Gao-Howard Lab at Northwestern studies ICU electronic health record (EHR) data and machine learning to generate clinically meaningful insights for critically ill patients.',
   'For publications, Cathy publishes under the name Catherine A. Gao, MD, MS (ORCID: https://orcid.org/0000-0001-5576-3943).',
   'Our group brings together clinicians, data scientists, trainees, and collaborators across institutions to connect bedside questions with rigorous computational methods.',
-  'Note: this is the Gao-Howard Lab (Cathy Gao-Howard), not the other Gao lab at Northwestern led by Ruli Gao: https://labs.feinberg.northwestern.edu/gao/index.html',
+  'Note: this is the Gao-Howard Lab (Cathy Gao), not the other Gao lab at Northwestern led by Ruli Gao: https://labs.feinberg.northwestern.edu/gao/index.html',
 ]
 
 export const team = [
@@ -26,14 +26,14 @@ export const team = [
     years: '2023-present',
     mentorLine: 'Co-mentored with Yuan Luo',
     blurb:
-      'Recent graduate student Saki Amagai contributed key work in multicenter ICU informatics and was awarded an American Heart Association (AHA) Predoctoral Fellowship. Her recent papers include A common longitudinal intensive care unit data format (CLIF) for critical illness research (Intensive Care Medicine, 2025), The Epidemiology of ICU Readmissions Across Ten Health Systems (Critical Care Explorations, 2025), and PAUSE-Agents: A Clinician-in-the-Loop Multi-Agent AI Pipeline for ICU-to-Ward Handoff Briefs (medRxiv, 2026).',
+      'Saki Amagai was awarded an American Heart Association (AHA) Predoctoral Fellowship. Her recent papers include The Epidemiology of ICU Readmissions Across Ten Health Systems (Critical Care Explorations, 2025), and PAUSE-Agents: A Clinician-in-the-Loop Multi-Agent AI Pipeline for ICU-to-Ward Handoff Briefs (medRxiv, 2026).',
     photoSrc: '/cathy-saki-poster.png',
     photoAlt: 'Cathy Gao-Howard and Saki Amagai standing beside Saki\'s ICU research poster.',
   },
   {
     name: 'Wan-Ting Liao, MS',
     role: 'Research Data Analyst',
-    years: '2024–',
+    years: '2024–present',
     blurb:
       'Wan-Ting helps manage the NU-CLIF database and supports ongoing CLIF Consortium collaborations across institutions.',
     photoSrc: '/wan-ting-liao.png',
@@ -46,7 +46,7 @@ export const team = [
   {
     name: 'Claudia Bennett-Caso, MD & Bhavana Ambil, MD',
     role: 'Medicine residents',
-    years: '2025-',
+    years: '2025-present',
     blurb: 'Extubation to HFNC/NIV, proning documentation',
     photoSrc: '/claudia-bhavana-team.png',
     photoAlt: 'Claudia Bennett-Caso and Bhavana Ambil with collaborators at a poster session.',
@@ -82,7 +82,7 @@ export const research = [
   {
     icon: 'people',
     title: 'Team science',
-    body: 'Good critical care research is a team sport. We work alongside clinicians, data scientists, and bench researchers across Northwestern to connect bedside questions with computational answers.',
+    body: 'Good critical care research is a team sport. We work alongside clinicians, data scientists, and bench researchers across Northwestern and North America to connect bedside questions with computational answers.',
   },
 ]
 
@@ -118,13 +118,7 @@ export const links = [
     imageSrc: '/budinger-misharin-group.png',
     imageAlt: 'Group photo associated with the Budinger and Misharin labs.',
   },
-  {
-    title: 'NU PCCM Fellowship Blog',
-    subtitle: 'Started & run by Cathy',
-    body: 'Stories and updates from the Northwestern Pulmonary & Critical Care fellowship.',
-    href: 'https://sites.northwestern.edu/pccmfellowship',
-    host: 'sites.northwestern.edu',
-  },
+
 ]
 
 export const scholar = {
