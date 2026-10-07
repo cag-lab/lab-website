@@ -122,7 +122,7 @@ function About() {
               return (
                 <p key={i} className="lead about__lead-with-headshot">
                   <img
-                    src="/cathy-gao-howard-headshot.jpg"
+                    src="./cathy-gao-howard-headshot.jpg"
                     alt="Headshot of Cathy Gao-Howard"
                     loading="lazy"
                     className="about__headshot"
