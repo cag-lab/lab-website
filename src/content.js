@@ -136,6 +136,8 @@ export const links = [
     body: 'Successful Clinical Response in Pneumonia Therapy Systems Biology Center.',
     href: 'https://script.northwestern.edu/',
     host: 'script.northwestern.edu',
+    imageSrc: './script-logo.jpg',
+    imageAlt: 'SCRIPT logo for Successful Clinical Response in Pneumonia Treatment.',
   },
   {
     title: 'Budinger / Misharin lab',
