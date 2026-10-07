@@ -117,9 +117,22 @@ function About() {
         <div className="about__text reveal">
           <p className="eyebrow">About</p>
           <h2>Meet the Lab</h2>
-          {about.map((p, i) => (
-            <p key={i} className={i === 0 ? 'lead' : ''}>{renderTextWithLinks(p)}</p>
-          ))}
+          {about.map((p, i) => {
+            if (i === 0) {
+              return (
+                <p key={i} className="lead about__lead-with-headshot">
+                  <img
+                    src="/cathy-gao-howard-headshot.jpg"
+                    alt="Headshot of Cathy Gao-Howard"
+                    loading="lazy"
+                    className="about__headshot"
+                  />
+                  {renderTextWithLinks(p)}
+                </p>
+              )
+            }
+            return <p key={i}>{renderTextWithLinks(p)}</p>
+          })}
           <div className="about__team">
             <h3>Team</h3>
             {team.map((member) => (

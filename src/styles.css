@@ -112,7 +112,24 @@ a { color: inherit; }
 .section__head { text-align: center; max-width: 680px; margin-bottom: 3.5rem; }
 
 /* About */
-.about { max-width: 860px; margin: 0 auto; }
+.about {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.about__headshot {
+  width: 120px;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  float: left;
+  margin: 0.2rem 1rem 0.35rem 0;
+}
+.about__lead-with-headshot::after {
+  content: '';
+  display: block;
+  clear: both;
+}
 .lead { font-size: 1.2rem; color: var(--ink); }
 .about__text p:not(.eyebrow):not(.lead) { color: var(--ink-soft); }
 .about__team {
@@ -267,6 +284,9 @@ blockquote {
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .about { max-width: 100%; }
+  .about__headshot {
+    width: 96px;
+  }
   .cards, .links { grid-template-columns: 1fr; max-width: 560px; }
   .timeline { grid-template-columns: 1fr; gap: 32px; padding-left: 36px; }
   .timeline::before { top: 10px; bottom: 10px; left: 9px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, var(--lav-200), var(--lav-500)); }

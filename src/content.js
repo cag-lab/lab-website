@@ -13,9 +13,7 @@ export const lab = {
 }
 
 export const about = [
-  'The Gao-Howard Lab at Northwestern studies ICU electronic health record (EHR) data and machine learning to generate clinically meaningful insights for critically ill patients.',
-  'For publications, Cathy publishes under the name Catherine A. Gao, MD, MS (ORCID: https://orcid.org/0000-0001-5576-3943).',
-  'Our group brings together clinicians, data scientists, trainees, and collaborators across institutions to connect bedside questions with rigorous computational methods.',
+  "Hi, I'm Cathy Gao-Howard, a critical care physician-scientist at Northwestern. I went to Michigan for med school followed by residency at Yale and fellowship at Northwestern. Our group studies ICU electronic health record (EHR) data using machine learning to generate clinically meaningful insights for critically ill patients. I publish under Catherine A. Gao, MD, MS (ORCID: https://orcid.org/0000-0001-5576-3943). We are interested in new technoloqies applied to this area, including leveraging LLMs, foundation models, and improved computational phenotyping. We collaborate extensively within the CLIF Consortium (https://clif-icu.com).",
   'Note: this is the Gao-Howard Lab (Cathy Gao), not the other Gao lab at Northwestern led by Ruli Gao: https://labs.feinberg.northwestern.edu/gao/index.html',
 ]
 
@@ -27,8 +25,12 @@ export const team = [
     mentorLine: 'Co-mentored with Yuan Luo',
     blurb:
       'Saki Amagai was awarded an American Heart Association (AHA) Predoctoral Fellowship. Her recent papers include The Epidemiology of ICU Readmissions Across Ten Health Systems (Critical Care Explorations, 2025), and PAUSE-Agents: A Clinician-in-the-Loop Multi-Agent AI Pipeline for ICU-to-Ward Handoff Briefs (medRxiv, 2026).',
-    photoSrc: './cathy-saki-poster.png',
-    photoAlt: 'Cathy Gao-Howard and Saki Amagai standing beside Saki\'s ICU research poster.',
+    photoSrc: './saki-amagai-headshot.png',
+    photoAlt: 'Portrait of Saki Amagai.',
+    photoClass: 'team-member__photo--small',
+    secondaryPhotoSrc: './cathy-saki-poster.png',
+    secondaryPhotoAlt: 'Cathy Gao-Howard and Saki Amagai standing beside Saki\'s ICU research poster.',
+    secondaryPhotoClass: 'team-member__photo--group',
   },
   {
     name: 'Wan-Ting Liao, MS',
@@ -62,8 +64,34 @@ export const onwards = [
       'Co-mentored with Ankit Agrawal, PhD, in labs of Sasha Misharin, MD PhD, and Alok Choudhary, PhD',
     years: '2023-2026',
     blurb: '',
-    photoSrc: './alec-peltekian.png',
-    photoAlt: 'Alec Peltekian and collaborators standing in front of a research poster.',
+    photoSrc: './alec-peltekian-headshot.png',
+    photoAlt: 'Portrait of Alec Peltekian.',
+    photoClass: 'team-member__photo--small',
+    secondaryPhotoSrc: './alec-peltekian.png',
+    secondaryPhotoAlt: 'Alec Peltekian and collaborators standing in front of a research poster.',
+    secondaryPhotoClass: 'team-member__photo--group',
+  },
+  {
+    name: 'Mary Mengou Zhu',
+    role: 'Northwestern Internal Medicine Resident → fellow at MGB',
+    years: '2022-2026',
+    blurb: '',
+    photoSrc: './mary-mengou-zhu.png',
+    photoAlt: 'Portrait of Mary Mengou Zhu.',
+    photoClass: 'team-member__photo--small',
+    secondaryPhotoSrc: './mary-mengou-zhu-poster.png',
+    secondaryPhotoAlt: 'Mary Mengou Zhu presenting a research poster with collaborators.',
+    secondaryPhotoClass: 'team-member__photo--group',
+  },
+  {
+    name: 'Samuel Lin and Mesoma Akpuokwe',
+    role: '2023 Kimberly Querrey Summer Research Program',
+    mentorLine:
+      'Co-mentored with Nikolay Markov (grad student, now post-doc at MSK) and Sam Fenske (data scientist, now grad student at Yale)',
+    years: '2023',
+    blurb: '',
+    photoSrc: './samuel-lin-mesoma-akpuokwe.png',
+    photoAlt: 'Samuel Lin and Mesoma Akpuokwe presenting research with mentors and collaborators.',
     photoClass: 'team-member__photo--group',
   },
 ]
